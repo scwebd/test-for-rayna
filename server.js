@@ -3,7 +3,7 @@ dotenv.config();
 // *** Dependencies
 // =============================================================
 var express = require("express");
-
+var exphbs = require("express-handlebars");
 // Sets up the Express App
 // =============================================================
 var app = express();
@@ -19,6 +19,8 @@ console.log(mypassword)
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+app.engine("handlebars", exphbs({ defaultLayout: "main"}));
+app.set("view engine", "handlebars");
 // Static directory
 app.use(express.static("public"));
 
@@ -26,7 +28,9 @@ app.use(express.static("public"));
 // =============================================================
 require("./routes/api-routes.js")(app);
 require("./routes/html-routes.js")(app);
-require("./routes/post-api-routes.js")(app)
+require("./routes/post-api-routes.js")(app);
+
+
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
@@ -35,3 +39,7 @@ db.sequelize.sync().then(function() {
     console.log("App listening on PORT " + PORT);
   });
 });
+
+
+
+
