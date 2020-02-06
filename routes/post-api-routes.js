@@ -63,5 +63,22 @@ module.exports = function (app) {
         res.json(dbPost);
       });
   });
+<<<<<<< HEAD
   
 }
+=======
+ rayna_dev
+  
+}
+=======
+  //test route 
+  app.post("/api/signup", function(req, res){
+    console.log(req.body.test)
+    res.json({message: "server respons"})
+    db.Post.create(req.body).then(function(dbPost) {
+      res.json(dbPost);
+   });
+  })
+};
+ master
+>>>>>>> c43cbaf42133ade6fdedf6e8e6b615e3ae141a8b
