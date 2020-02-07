@@ -5,6 +5,8 @@ module.exports = function(sequelize, DataTypes) {
       last_name: DataTypes.STRING,
       role: DataTypes.STRING,
       business: DataTypes.STRING,
+      email: DataTypes.STRING,
+
     });
   
     Profession.associate = function(models) {
@@ -19,3 +21,5 @@ module.exports = function(sequelize, DataTypes) {
   
     return Profession;
   };
+
+  

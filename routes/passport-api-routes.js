@@ -110,6 +110,19 @@ module.exports = function (app) {
       res.json(dbPost);
     });
   })
+//login
+//in the req object express you iwll have access to the-req.user.id
 
+app.post("/api/login/handlebars", function(req, res) {
+  console.log(req.body.test)
+  res.json({ message: "server respons" })
+})
+
+};
   
-}
+
+
+
+
+
+
