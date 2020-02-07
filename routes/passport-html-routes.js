@@ -33,6 +33,13 @@ module.exports = function(app) {
     res.render("index", { message: "hi" });
   });
 
+  app.get("/city", function (req, res) {
+    res.render("cityView", { message: "hi" });
+  });
+
+  app.get("/index", function (req, res) {
+    res.render("index", { message: "hi" });
+  });
   // cms route loads cms.html
   app.get("/cms", function (req, res) {
     res.sendFile(path.join(__dirname, "../views/layouts/cms.html"));
