@@ -34,7 +34,7 @@ app.use(express.static("public"));
 // =============================================================
 require("./routes/api-routes.js")(app);
 require("./routes/html-routes.js")(app);
-require("./routes/post-api-routes.js")(app);
+// require("./routes/post-api-routes.js")(app);
 require("./routes/passport-api-routes")(app);
 
 
@@ -48,5 +48,5 @@ db.sequelize.sync().then(function() {
 });
 
 
-
-
+//login
+//in the req object express you iwll have access to the-req.user.id
