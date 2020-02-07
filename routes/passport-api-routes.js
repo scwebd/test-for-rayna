@@ -119,6 +119,14 @@ app.post("/api/login", function(req, res) {
   db.User.create(req.body).then(function(dbPost) {
     res.json(dbPost);
   });
+});
+
+app.post("/api/logout", function (req, res) {
+  console.log(req.user.id)
+  res.json({ message: "server respons" })
+  db.User.create(req.body).then(function(dbPost) {
+    res.json(dbPost);
+  })
 })
 
 };
