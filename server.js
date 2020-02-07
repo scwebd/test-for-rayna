@@ -41,7 +41,3 @@ db.sequelize.sync().then(function () {
     console.log("App listening on PORT " + PORT);
   });
 });
-
-
-//login
-//in the req object express you iwll have access to the-req.user.id
