@@ -15,7 +15,7 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/signup.handlebars"));
   });
 
-  app.get("/login", function(req, res) {
+  app.get("/public/login", function(req, res) {
     // If the user already has an account send them to the members page
     if (req.user) {
       res.redirect("/members");
